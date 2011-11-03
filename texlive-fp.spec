@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/fp
+# catalog-date 2009-09-26 11:43:36 +0200
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-fp
 Version:	20090926
 Release:	1
@@ -51,6 +57,7 @@ point real numbers of high precision.
 %{_texmfdistdir}/tex/plain/fp/fp.tex
 %doc %{_texmfdistdir}/doc/latex/fp/README
 %doc %{_texmfdistdir}/doc/latex/fp/fp.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -61,3 +68,5 @@ point real numbers of high precision.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
