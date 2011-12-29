@@ -17,27 +17,17 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 An extensive collection of arithmetic operations for fixed
 point real numbers of high precision.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -58,7 +48,6 @@ point real numbers of high precision.
 %{_texmfdistdir}/tex/plain/fp/fp.tex
 %doc %{_texmfdistdir}/doc/latex/fp/README
 %doc %{_texmfdistdir}/doc/latex/fp/fp.tex
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -69,5 +58,3 @@ point real numbers of high precision.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
