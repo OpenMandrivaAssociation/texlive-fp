@@ -5,8 +5,8 @@
 # catalog-license lppl
 # catalog-version undef
 Name:		texlive-fp
-Version:	20090926
-Release:	10
+Version:	20170414
+Release:	1
 Summary:	Fixed point arithmetic
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fp
