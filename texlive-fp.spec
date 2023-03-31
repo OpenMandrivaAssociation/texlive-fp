@@ -1,6 +1,6 @@
 Name:		texlive-fp
 Version:	49719
-Release:	1
+Release:	2
 Summary:	Fixed point arithmetic
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fp
