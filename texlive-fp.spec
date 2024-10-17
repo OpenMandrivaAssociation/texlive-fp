@@ -3,7 +3,7 @@ Version:	49719
 Release:	2
 Summary:	Fixed point arithmetic
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fp
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/fp
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fp.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fp.doc.r%{version}.tar.xz
